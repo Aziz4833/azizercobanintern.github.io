@@ -1,0 +1,226 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+/*navbar starts */
+
+.navbar-inner{
+    display: flex;
+    width: 80%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+
+.navbar {
+    height: 150px;
+    background-color: black;
+
+    padding: 0px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    border-radius: 10px;
+    
+}
+
+.navbar img {
+    height: 100px;
+}
+
+.navbar-text {
+    color: white;
+    transition: color 0.5s ease; 
+}
+
+.active {
+    color: red;
+}
+
+#navbar-img svg {
+    fill: currentColor; 
+}
+
+
+
+
+
+
+
+
+/* Default styles for the navbar */
+#navbar-inner {
+    display: flex; /* Default display style */
+    transition: all 0.3s ease; /* Smooth transition for changes */
+    z-index: 34;
+    /* Additional default styles */
+}
+
+/* Hide navbar-inner when viewport width is less than or equal to 830px */
+@media (max-width: 830px) {
+    #navbar-inner {
+        display: none; /* Hide the navbar by default in this range */
+    }
+}
+
+/* Compressed state styles */
+#navbar-inner.compress {
+    display: flex; /* Show navbar-inner when it has the 'compress' class */
+    flex-direction: column; /* Stack items vertically */
+    background-color: grey;
+    padding: 10px 0px;
+    width: 100%; /* Full width of the viewport */
+    position: absolute; /* Use absolute positioning */
+    top: 150px; /* Adjust this value to place it further down */
+    left: 0; /* Align to the left edge */
+    z-index: 34; /* Ensure it stays on top of other elements */
+    max-height: 400px; /* Limit height if needed, add scrollbar if necessary */
+    overflow-y: auto; /* Enable scrolling if content overflows */
+}
+
+/* Optional: Adjust the original navbar to ensure visibility */
+#navbar {
+    position: relative; /* Ensure it has relative positioning */
+    z-index: 35; /* Ensure it is above the compressed navbar */
+}
+
+#burger{
+    cursor: pointer;
+}
+
+#burger svg {
+    color: white;
+}
+
+.navbar-text {
+    font-size: 20px;
+}
+
+
+.navbar-text:hover{
+    font-size: 25px;
+    transition: 0.5s ease;
+}
+
+#navbar-img img{
+    height: 50px;
+    width: 70px;
+}
+
+
+
+
+/* navbar ends*/
+
+.info-box{
+    background-color: #1f1f1f;
+    color: white;
+    padding: 20px;
+    height: 250px;
+}
+
+.info-flex{
+    display: flex;
+    gap: 5px;
+    width: 100%;
+}
+
+.img{
+    min-width: 150px;
+    min-height: 150px;
+    background-color: rgba(255, 0, 0, 0.623);
+    border: white;
+    border-radius: 10px;
+}
+
+@media (max-width: 361px) {
+    .img{
+        min-width: 100px;
+        min-height: 100px;
+        background-color: rgba(255, 0, 0, 0.623);
+        border: white;
+        border-radius: 10px;
+    }
+}
+
+.img img{
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+}
+
+.footer{
+    padding: 10px;
+    background-color: black;
+    height: 370px;
+    color: white;
+    
+}
+
+.appNames{
+    display: flex;
+    gap: 13px;
+}
+
+.footer-apps{
+    display: flex;
+    gap: 10px;
+}
+
+.left-footer{
+    float: left;
+}
+
+.right-footer{
+    float: right;
+}
+
+.footer h2{
+    text-align: center;
+}
+
+.bottom-footer{
+    clear: both;
+    text-align: center;
+}
+
+.a{
+    color: white;
+}
+
+.image-foooter-top{
+    display: flex;
+    justify-content: center;
+    height: 80px;
+    
+}
+
+.image-foooter-top img{
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+
+@media (max-width: 360px) {
+    
+
+    .navbar img {
+        height: 50px;
+    }
+
+    .appNames p{
+        font-size: 13px;
+    }
+}

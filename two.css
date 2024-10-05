@@ -1,0 +1,360 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+a{
+    text-decoration: none;
+}
+
+/*navbar starts */
+
+.navbar-inner{
+    display: flex;
+    width: 80%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+
+.navbar {
+    height: 150px;
+    background-color: black;
+
+    padding: 0px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    border-radius: 10px;
+    
+}
+
+.navbar img {
+    height: 100px;
+}
+
+.navbar-text {
+    color: white;
+    transition: color 0.5s ease; 
+}
+
+.active {
+    color: red;
+}
+
+#navbar-img svg {
+    fill: currentColor; 
+}
+
+
+
+
+
+
+
+
+/* Default styles for the navbar */
+#navbar-inner {
+    display: flex; /* Default display style */
+    transition: all 0.3s ease; /* Smooth transition for changes */
+    z-index: 34;
+    /* Additional default styles */
+}
+
+/* Hide navbar-inner when viewport width is less than or equal to 830px */
+@media (max-width: 830px) {
+    #navbar-inner {
+        display: none; /* Hide the navbar by default in this range */
+    }
+}
+
+/* Compressed state styles */
+#navbar-inner.compress {
+    display: flex; /* Show navbar-inner when it has the 'compress' class */
+    flex-direction: column; /* Stack items vertically */
+    background-color: grey;
+    padding: 10px 0px;
+    width: 100%; /* Full width of the viewport */
+    position: absolute; /* Use absolute positioning */
+    top: 150px; /* Adjust this value to place it further down */
+    left: 0; /* Align to the left edge */
+    z-index: 34; /* Ensure it stays on top of other elements */
+    max-height: 400px; /* Limit height if needed, add scrollbar if necessary */
+    overflow-y: auto; /* Enable scrolling if content overflows */
+}
+
+/* Optional: Adjust the original navbar to ensure visibility */
+#navbar {
+    position: relative; /* Ensure it has relative positioning */
+    z-index: 35; /* Ensure it is above the compressed navbar */
+}
+
+#burger{
+    cursor: pointer;
+}
+
+#burger svg {
+    color: white;
+}
+
+.navbar-text {
+    font-size: 20px;
+}
+
+
+.navbar-text:hover{
+    font-size: 25px;
+    transition: 0.5s ease;
+}
+
+#navbar-img img{
+    height: 50px;
+    width: 70px;
+}
+
+
+
+
+/* navbar ends*/
+
+.carousel-inner {
+    height: 100%;
+}
+
+.carousel-item img,
+.carousel-item video {
+    object-fit: cover;
+}
+
+.video-slide {
+    position: relative;
+    height: 100%;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.carousel-item {
+    width: 100%;
+    height: 100%;
+    
+}
+
+@media (max-width: 330px) {
+    #slider{
+        max-width: 230px;
+        max-height: 100px;
+    }
+
+    .container-box{
+        max-width: 270px;
+        width: 100%;
+    
+        position: relative;
+        display: flex;
+        justify-content: center;
+        left: 5px;
+    }
+}
+
+#slider{
+    max-height: 400px;
+    
+}
+
+.middle{
+    background-color: #1f1f1f;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+.container-box{
+    width: 100%;
+    height: 150px;
+    margin: 10px 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.inner-container-flex{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    border: none;
+    border-radius: 5px;
+    background-color: grey;
+    width: 300px;
+    height: 120px;
+    padding-left: 5px;
+}
+
+.img{
+    width: 50%;
+    height: 90%;
+    background-color: #1f1f1f;
+    border: none;
+    border-radius: 5px;
+}
+
+.img img{
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+.h5{
+    padding-top: 5px;
+    height: 100%;
+}
+
+@media (min-width: 530px) {
+    .container-box{
+        width: 100%;
+        height: 250px;
+        margin: 10px 0px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .inner-container-flex{
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        border: none;
+        border-radius: 5px;
+        background-color: grey;
+        width: 500px;
+        height: 200px;
+        padding-left: 5px;
+        transition: 0.5s ease;
+    }
+
+    .details p{
+        font-size: large;
+    }
+}
+
+.details-container{
+    width: 100%;
+    padding-left: 10px;
+    height: 120px;
+}
+
+.details{
+    margin-top: 20px;
+    color: white;
+    text-align: left;
+}
+
+.numbers{
+    display: flex;
+    background-color: #1f1f1f;
+    padding-bottom: 35px;
+    justify-content: center;
+    gap: 20px;
+}
+
+.numbers a{
+    text-decoration: none;
+    color: white;
+    font-size: large;
+}
+
+.numbers a:hover{
+    color: red;
+    transition: 0.2s ease-in;
+}
+
+.anchor-active{
+    text-align: center;
+    color: red;
+    
+    border: 2px solid red;
+    border-radius: 50%;
+    width: 30px;
+    background-color: rgba(133, 5, 5, 0.781);
+    transition: border ease 1.2s;
+
+
+}
+
+
+.footer{
+    padding: 10px;
+    background-color: black;
+    height: 370px;
+    color: white;
+    
+}
+
+.appNames{
+    display: flex;
+    gap: 13px;
+}
+
+.footer-apps{
+    display: flex;
+    gap: 10px;
+}
+
+.left-footer{
+    float: left;
+}
+
+.right-footer{
+    float: right;
+}
+
+.footer h2{
+    text-align: center;
+}
+
+.bottom-footer{
+    clear: both;
+    text-align: center;
+}
+
+.a{
+    color: white;
+}
+
+.image-foooter-top{
+    display: flex;
+    justify-content: center;
+    height: 80px;
+    
+}
+
+.image-foooter-top img{
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 360px) {
+    
+
+    .navbar img {
+        height: 50px;
+    }
+
+    .appNames p{
+        font-size: 13px;
+    }
+}

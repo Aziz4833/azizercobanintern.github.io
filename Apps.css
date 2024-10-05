@@ -1,0 +1,519 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+/*navbar starts */
+
+.navbar-inner{
+    display: flex;
+    width: 80%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+
+.navbar {
+    height: 150px;
+    background-color: black;
+
+    padding: 0px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    border-radius: 10px;
+    
+}
+
+.navbar img {
+    height: 100px;
+}
+
+.navbar-text {
+    color: white;
+    transition: color 0.5s ease; 
+}
+
+.active {
+    color: red;
+}
+
+#navbar-img svg {
+    fill: currentColor; 
+}
+
+
+
+
+
+
+
+
+/* Default styles for the navbar */
+#navbar-inner {
+    display: flex; /* Default display style */
+    transition: all 0.3s ease; /* Smooth transition for changes */
+    z-index: 34;
+    /* Additional default styles */
+}
+
+/* Hide navbar-inner when viewport width is less than or equal to 830px */
+@media (max-width: 830px) {
+    #navbar-inner {
+        display: none; /* Hide the navbar by default in this range */
+    }
+}
+
+/* Compressed state styles */
+#navbar-inner.compress {
+    display: flex; /* Show navbar-inner when it has the 'compress' class */
+    flex-direction: column; /* Stack items vertically */
+    background-color: grey;
+    padding: 10px 0px;
+    width: 100%; /* Full width of the viewport */
+    position: absolute; /* Use absolute positioning */
+    top: 150px; /* Adjust this value to place it further down */
+    left: 0; /* Align to the left edge */
+    z-index: 34; /* Ensure it stays on top of other elements */
+    max-height: 400px; /* Limit height if needed, add scrollbar if necessary */
+    overflow-y: auto; /* Enable scrolling if content overflows */
+}
+
+/* Optional: Adjust the original navbar to ensure visibility */
+#navbar {
+    position: relative; /* Ensure it has relative positioning */
+    z-index: 35; /* Ensure it is above the compressed navbar */
+}
+
+#burger{
+    cursor: pointer;
+}
+
+#burger svg {
+    color: white;
+}
+
+.navbar-text {
+    font-size: 20px;
+}
+
+
+.navbar-text:hover{
+    font-size: 25px;
+    transition: 0.5s ease;
+}
+
+#navbar-img img{
+    height: 50px;
+    width: 70px;
+}
+
+
+
+
+/* navbar ends*/
+
+
+.search-bg{
+    display: flex;
+    width: 100%;
+    height: 80px;
+    background-color: #0c0a0a;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 7px;
+    
+    
+    
+}
+
+
+.search-inner-box{
+    display: flex;
+    width: 700px;
+    height: 50%;
+    background-color: black;
+    border: none;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 7px;
+    
+}
+
+.search-inner-box input{
+    height: 25px;
+    border: none;
+    border-radius: 10px;
+    width: 500px;
+    background-color: grey;
+    cursor:pointer;
+    z-index: 1;
+}
+
+
+
+.search-inner-box svg{
+    color: rgba(255, 255, 255, 0.589);
+    cursor: pointer;
+}
+
+.svg-search svg {
+    width: 20px;
+}
+
+@media (max-width: 600px) {
+    .search-inner-box{
+        display: flex;
+        width: 90%;
+        height: 50%;
+        background-color: black;
+        border: none;
+        border-radius: 8px;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        
+    }
+}
+
+.body-part{
+    display: flex;
+    
+    justify-content: center;
+    background-color: #1f1f1f;
+    height: 1500px;
+    padding-top: 15px;
+}
+
+.grid-place {
+    
+    width: 500px;
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    
+}
+
+
+.box1{
+    background-color: #8080809f;
+    border: 2px solid red;
+    
+}
+
+.box2{
+    background-color: #8080809f;
+    border: 2px solid red;
+}
+
+.box3{
+    background-color: #8080809f;
+    border: 2px solid red;
+}
+
+.box4{
+    background-color: #8080809f;
+    border: 2px solid red;
+}
+
+.box5{
+    background-color: #8080809f;
+    border: 2px solid red;
+    
+}
+
+.box6{
+    background-color: #8080809f;
+    border: 2px solid red;
+}
+
+.box7{
+    background-color: #8080809f;
+    border: 2px solid red;
+    grid-column-start: span 2;
+}
+
+.img-container{
+    display: flex;
+    width: 100%;
+    height: 70%;
+    
+    align-items: center;
+    justify-content: center;
+}
+
+.inner-img{
+    height: 90%;
+    width: 80%;
+    
+    border: none;
+    border-radius: 10px;
+}
+
+.innerr-img{
+    height: 90%;
+    width: 93%;
+    
+    border: none;
+    border-radius: 10px;
+}
+
+.inner-img img{
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+}
+
+.innerr-img img{
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius:10px;
+}
+
+.box-lower{
+    display: flex;
+    height: 40%;
+    
+    width: 100%;
+    align-items: start;
+    justify-content:space-evenly;
+}
+
+.boxx-lower{
+    display: flex;
+    height: 40%;
+    gap: 5px;
+    width: 100%;
+    margin-left: 4%;
+    
+}
+
+.img-lower-container{
+    width: 40%;
+    
+    height: 60%;
+    border: none;
+    border-radius: 10px;
+}
+
+.imgg-lower-container{
+    width: 20%;
+    
+    height: 60%;
+    border: none;
+    border-radius: 10px;
+    
+}
+
+.img-lower-container img{
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+}
+
+.imgg-lower-container img{
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+}
+
+.box-lower p{
+    color:#1f1f1f;
+    font-weight: 700;
+}
+
+.boxx-lower p{
+    color:#1f1f1f;
+    font-weight: 700;
+}
+
+
+
+@media (max-width: 319px) {
+    .grid-place {
+        
+        width: 270px;
+        
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 200px 200px 200px 200px;
+        gap: 10px;
+        
+    }
+
+    .body-part{
+        display: flex;
+        
+        justify-content: center;
+        background-color: #1f1f1f;
+        height: 900px;
+        padding-top: 15px;
+    }
+
+    .box-lower p{
+        color:#1f1f1f;
+        font-weight: 700;
+        font-size: 10px;
+    }
+
+    .boxx-lower p{
+        color:#1f1f1f;
+        font-weight: 700;
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 550px) and (min-width: 320px) {
+    .grid-place {
+        
+        width: 315px;
+        
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 250px 250px 250px 250px;
+        gap: 10px;
+        
+    }
+
+    .body-part{
+        display: flex;
+        
+        justify-content: center;
+        background-color: #1f1f1f;
+        height: 1100px;
+        padding-top: 15px;
+    }
+
+    .box-lower p{
+        color:#1f1f1f;
+        font-weight: 700;
+        font-size: 12px;
+    }
+
+    .boxx-lower p{
+        color:#1f1f1f;
+        font-weight: 700;
+        font-size: 12px;
+    }
+}
+
+.numbers{
+    display: flex;
+    background-color: #1f1f1f;
+    padding-bottom: 60px;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 15px;
+    
+}
+
+.numbers a{
+    text-decoration: none;
+    color: white;
+    font-size: large;
+}
+
+.numbers a:hover{
+    color: red;
+    transition: 0.2s ease-in;
+}
+
+.anchor-active{
+    text-align: center;
+    color: red;
+    
+    border: 2px solid red;
+    border-radius: 50%;
+    width: 30px;
+    background-color: rgba(133, 5, 5, 0.781);
+    transition: border ease 1.2s;
+
+
+}
+
+.footer{
+    padding: 10px;
+    background-color: black;
+    height: 370px;
+    color: white;
+    
+}
+
+.appNames{
+    display: flex;
+    gap: 13px;
+}
+
+.footer-apps{
+    display: flex;
+    gap: 10px;
+}
+
+.left-footer{
+    float: left;
+}
+
+.right-footer{
+    float: right;
+}
+
+.footer h2{
+    text-align: center;
+}
+
+.bottom-footer{
+    clear: both;
+    text-align: center;
+}
+
+.a{
+    color: white;
+}
+
+.image-foooter-top{
+    display: flex;
+    justify-content: center;
+    height: 80px;
+    
+}
+
+.image-foooter-top img{
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+@media (max-width: 360px) {
+    
+
+    .navbar img {
+        height: 50px;
+    }
+
+    .appNames p{
+        font-size: 13px;
+    }
+}
